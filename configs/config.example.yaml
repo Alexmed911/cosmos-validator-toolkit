@@ -1,0 +1,30 @@
+node:
+  rpc: "http://localhost:26657"
+  grpc: "http://localhost:9090"
+  chain_id: "cosmoshub-4"
+  binary: "gaiad"
+  validator_address: "cosmosvaloper1YOURADDRESS"
+  delegator_address: "cosmos1YOURADDRESS"
+  key_name: "validator"
+
+alerts:
+  telegram_bot_token: ""
+  telegram_chat_id: ""
+  missed_blocks_threshold: 5
+  low_peers_threshold: 3
+
+rewards:
+  auto_claim: true
+  claim_interval_hours: 24
+  restake: true
+  min_claim_amount: "1000000"
+  denom: "uatom"
+  gas_prices: "0.025uatom"
+
+governance:
+  watch: true
+  auto_vote: ""   # yes | no | abstain | no_with_veto | "" (manual)
+
+monitoring:
+  interval_seconds: 60
+  log_file: "/var/log/validator-monitor.log"
